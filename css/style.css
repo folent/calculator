@@ -1,0 +1,58 @@
+.wrapper {
+    max-width: 200px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fdfdfd;
+}
+
+.buttons__wrapper, .number-buttons__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.clear-buttons__wrapper {
+    display: flex;
+}
+
+.number-buttons__wrapper {
+    width: 78%;
+}
+
+.action-buttons__wrapper {
+    width: 22%;
+}
+
+.number-btn, .action-btn {
+    outline: 0;
+    cursor: pointer;
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fdfdfd;
+}
+
+.number-btn {
+    font-weight: 600;
+}
+
+.action-btn {
+    background-color: #ddd;
+}
+
+.number-btn:hover, .action-btn:hover {
+    opacity: 0.7;
+}
+
+#calculatorInput {
+    width: 132px;
+    padding: 10px;
+    background-color: #e8e8e8;
+    outline: none;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
