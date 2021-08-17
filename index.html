@@ -10,13 +10,14 @@
 <body>
     <div class="wrapper">
         <div class="calculator">
-            <div>
-                <input type="text" name="calculatorInput" id="calculatorInput" disabled>
+            <div class="inputs__wrapper">
+                <input type="text" name="lastActions" id="lastActions" class="form-input" disabled>
+                <input type="text" name="calculatorInput" id="calculatorInput" class="form-input" disabled>
             </div>
             <div>
                 <div class="clear-buttons__wrapper">
-                    <div><button class='action-btn'>CE</button></div>
-                    <div><button class='action-btn'>C</button></div>
+                    <div><button class='action-btn' id="removeOneCharacter">CE</button></div>
+                    <div><button class='action-btn' id="removeAllCharacters">C</button></div>
                 </div>
                 <div class="buttons__wrapper">
                     <div class="number-buttons__wrapper">
@@ -29,7 +30,7 @@
                         <div><button class='number-btn'>1</button></div>
                         <div><button class='number-btn'>2</button></div>
                         <div><button class='number-btn'>3</button></div>
-                        <div><button class='action-btn'>,</button></div>
+                        <div><button class='action-btn'>.</button></div>
                         <div><button class='number-btn'>0</button></div>
                         <div><button class='action-btn'>=</button></div>
                     </div>
