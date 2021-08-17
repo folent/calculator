@@ -56,11 +56,14 @@ const calculateResult = (buttonValue, IsActionButtonValue) => {
         let operands = calculatorInput.value.split(action);
         let [operandOne, operandTwo] = operands;
 
-
-        if(operandOne && operandTwo) {
-            lastActionsInput.value = `${operandOne} ${action} ${operandTwo}`;
-            buttonActions(action, operandOne, operandTwo);
+        const operandsIsNaNResult = operandsIsNaN(operandOne, operandTwo);
+        if(operandsIsNaNResult) {
+            return;
         }
+
+        buttonActions(action, operandOne, operandTwo);
+        
+        lastActionsInput.value = `${operandOne} ${action} ${operandTwo}`;
 
         if(buttonValue === '=') {
             lastActionsInput.value += ` ${buttonValue}`;
@@ -74,6 +77,14 @@ const calculateResult = (buttonValue, IsActionButtonValue) => {
         calculatorInput.value += buttonValue;
     }
 }
+const operandsIsNaN = (operandOne, operandTwo) => {
+    if(isNaN(+operandOne) || isNaN(+operandTwo)) {
+        calculatorInput.value = "Введите корректное значение";
+        return true;
+    }
+    return false;
+}
+
 const buttonActions = (action, operandOne, operandTwo) => {
     switch(action) {
         case '÷':
